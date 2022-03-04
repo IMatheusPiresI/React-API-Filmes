@@ -5,7 +5,7 @@ import { ImFilm } from 'react-icons/im'
 import { RiNetflixFill } from 'react-icons/ri'
 import { MdOutlineDeviceUnknown } from 'react-icons/md'
 
-const NavHorizontal = () =>{
+const NavVertical = () =>{
     //  Adiciona uma sombra destacada ao ícone selecionado para exibição;
     useEffect(()=>{
             const itens = document.querySelectorAll('[data-id]')
@@ -21,22 +21,26 @@ const NavHorizontal = () =>{
     return(
         <ContainerNav>
             <Navitem
+                path={'/film'}
                 icon={<ImFilm/>}
             />
 
             <Navitem
+                path={'/netflix'}
                 icon={<RiNetflixFill/>}
             />
 
             <Navitem
+                path={'/draw'}
                 icon={<MdOutlineDeviceUnknown/>}
             />
 
             <Navitem
+                path={'/developer'}
                 icon={<ImFilm/>}
             />
         </ContainerNav>
     )
 }
 
-export default NavHorizontal;
+export default NavVertical;

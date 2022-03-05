@@ -32,8 +32,8 @@ const Home = () =>{
         } else if(window.location.pathname === '/developer'){
             itens[3].classList.add('item-clicked', 'icon-clicked')
         }
-    })
-
+    }, [])
+    
     return(
         <ContainerBody>
             <ParticleBackground/>

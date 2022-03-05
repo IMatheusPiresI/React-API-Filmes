@@ -10,8 +10,3 @@ export const ContainerDraw = styled.div`
     justify-content: center;
 `;
 
-export const TitleContents = styled.h2`
-    font-size: 45px;
-    text-shadow: -1px 1px #FFF;
-    color: rgba(232, 0, 97, 1);
-`;

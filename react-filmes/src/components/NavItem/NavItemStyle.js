@@ -12,6 +12,7 @@ export const BoxItem = styled.div`
     justify-content: center;
     transform: scale(.9);
     transition: ease .4s ;
+    cursor: pointer;
 
     &:hover{
         transform: scale(1);

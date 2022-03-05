@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { ContainerHeader, TitleHeader, Logo } from "./HeaderStyle";
+import { ContainerHeader, BoxLogo, Logo } from "./HeaderStyle";
 import { useNavigate } from "react-router-dom";
 import searchmovie from '../../images/searchmovie.png'
 
 const Header = ({acao}) =>{
-    const home = useNavigate()
+    const navigate = useNavigate()
 
     useEffect(()=>{
         document.querySelector('#home').addEventListener('click', ()=>{
@@ -13,12 +13,13 @@ const Header = ({acao}) =>{
                 item.classList.remove('item-clicked', 'icon-clicked')
             })
         })
-    })
+    }, [])
 
     return(
         <ContainerHeader id="nav-horizontal" className={ acao ? 'scroll-on' : 'scroll-off'}>
-            <Logo src={searchmovie} alt='logo'/>
-            <TitleHeader id="home" onClick={()=> home('/')}>Search The Movie</TitleHeader>
+            <BoxLogo id="home" >
+                <Logo src={searchmovie} alt='logo' onClick={()=> navigate('/')}/>
+            </BoxLogo>
         </ContainerHeader>
     )
 }

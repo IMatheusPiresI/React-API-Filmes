@@ -5,7 +5,7 @@ export const ContainerNav = styled.nav`
     width: 120px;
     height: calc(100vh - 75px);
     background-image: linear-gradient(to top, rgba(0,0,0, 0.3) , transparent);
-    border-right: 1px solid rgba(232, 0, 97, 0.3);
+    border-right: 1px solid rgba(232, 0, 97, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;

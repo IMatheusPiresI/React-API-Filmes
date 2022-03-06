@@ -4,6 +4,7 @@ import { ContainerNav } from "./NavVerticalStyle";
 import { ImFilm } from 'react-icons/im'
 import { RiNetflixFill } from 'react-icons/ri'
 import { MdOutlineDeviceUnknown } from 'react-icons/md'
+import { BsPersonBadge } from 'react-icons/bs'
 
 const NavVertical = () =>{
     //  Adiciona uma sombra destacada ao ícone selecionado para exibição;
@@ -37,7 +38,7 @@ const NavVertical = () =>{
 
             <Navitem
                 path={'/developer'}
-                icon={<ImFilm/>}
+                icon={<BsPersonBadge/>}
             />
         </ContainerNav>
     )

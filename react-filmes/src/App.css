@@ -10,3 +10,10 @@
   min-height: 100vh;
 }
 
+.flex{
+  display: flex;
+}
+
+.none{
+  display: none;
+}

@@ -12,8 +12,8 @@ const Routing = () =>{
         <BrowserRouter>
             <Routes>
                 <Route exact path='/' element={<Home/>}>
-                    <Route exact path='/' element={<MainContests/>}/>
-                    <Route path='/film' element={<FilmContest/>}/>
+                    <Route exact path='/search' element={<MainContests/>}/>
+                    <Route path='/' element={<FilmContest/>}/>
                     <Route path='/netflix' element={<NetflixContest/>}/>
                     <Route path='/draw' element={<DrawContents/>}/>
                     <Route path='/developer' element={<DeveloperContents/>}/>

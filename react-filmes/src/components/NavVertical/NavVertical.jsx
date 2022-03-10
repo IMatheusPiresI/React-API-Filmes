@@ -22,7 +22,7 @@ const NavVertical = () =>{
     return(
         <ContainerNav>
             <Navitem
-                path={'/film'}
+                path={'/search'}
                 icon={<ImFilm/>}
             />
 

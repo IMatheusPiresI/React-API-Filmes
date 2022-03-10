@@ -10,10 +10,20 @@
   min-height: 100vh;
 }
 
-.flex{
-  display: flex;
+.list-item{
+  display:  inline-block;
+  width: 200px;
+  height: 100%;
+  transform: scale(.9);
+  transition: all .3s ease;
+  cursor: pointer;
 }
 
-.none{
-  display: none;
+.list-item:hover{
+  transform: scale(1);
 }
+
+img{
+  width: 100%;
+}
+

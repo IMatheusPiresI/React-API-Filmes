@@ -2,10 +2,24 @@ import styled from "styled-components";
 
 export const ContainerRow = styled.div`
     width: calc(100vw - 135px);
+    animation: Visible .5s ease-in-out;
 
     .icon{
         color: rgba(232, 0, 97, 1);
         font-size: 45px;
+    }
+
+
+    @keyframes Visible{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 `;
 
@@ -65,5 +79,5 @@ export const MovieRowRigth = styled.div`
 
 export const MovieRowList = styled.div`
     transition: .4s;
-    background-color: #000;
 `;
+

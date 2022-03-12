@@ -13,13 +13,20 @@ const Home = () =>{
         const activate = () =>{
             if(window.scrollY > 10){
                 setAtivacor(true)
+                document.querySelectorAll('[data-title]').forEach(title =>{
+                    title.classList.add('scroll-on')
+                })
             }else{
                 setAtivacor(false)
+                document.querySelectorAll('[data-title]').forEach(title =>{
+                    title.classList.remove('scroll-on')
+                })
             }
         }
         activate()
         window.addEventListener('scroll', activate)
     }, [ativacor])
+
 
     useEffect(()=>{
         const itens = document.querySelectorAll('[data-id')

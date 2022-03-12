@@ -10,18 +10,6 @@
   min-height: 100vh;
 }
 
-.list-item{
-  display:  inline-block;
-  width: 200px;
-  height: 100%;
-  transform: scale(.9);
-  transition: all .3s ease;
-  cursor: pointer;
-}
-
-.list-item:hover{
-  transform: scale(1);
-}
 
 img{
   width: 100%;

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { ContainerRow, TitleSession, MovieListArea, MovieRowList } from "./MovieRowStyle";
+import { ContainerRow, TitleSession, MovieListArea, MovieRowList} from "./MovieRowStyle";
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import { MovieRowLeft, MovieRowRigth } from "./MovieRowStyle"
+import ItemFilm from "../ItemFilm/ItemFilm";
 
-const MovieRow = ({title, items}) =>{
+const MovieRow = ({title, items, slug}) =>{
     const [scrollX, setScrollX] = useState(0)
 
     const handleLeftArrow = () =>{
@@ -12,8 +13,8 @@ const MovieRow = ({title, items}) =>{
         if(x > 0){
             x = 0
         }
-        console.log(scrollX)
         setScrollX(x)
+        console.log(items)
     }
 
     const handleRightArrow = () =>{
@@ -22,9 +23,9 @@ const MovieRow = ({title, items}) =>{
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 175;
         }
-        console.log(scrollX)
         setScrollX(x)
     }
+
     return(
         <ContainerRow>
             <TitleSession>{title}</TitleSession>
@@ -42,9 +43,15 @@ const MovieRow = ({title, items}) =>{
                }}>
                {items.results.length > 0 && items.results.map((item, key)=>{
                     return (
-                        <div className="list-item" key={key}>
-                            <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.original_title}/> 
-                        </div>
+                                <ItemFilm 
+                                    key={key}
+                                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                                    alt={item.original_title}
+                                    slug={slug}
+                                    film={item.id}
+                                    type={item.media_type}
+                                    video={item.video}
+                                />
                     )
                 })}
                </MovieRowList>

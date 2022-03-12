@@ -4,6 +4,10 @@ export const ContainerContests = styled.div`
     margin-left: 120px;
     min-height: 100vh;
     width: calc(100% - 120px);
+
+    .watch-details{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    }
 `;
 
 export const TitleContents = styled.h2`
@@ -16,11 +20,11 @@ export const TitleContents = styled.h2`
     border-bottom: 1px solid rgba(232, 0, 97, .5);
     position: fixed;
     z-index: 10;
-    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.8) , transparent );
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) , transparent );
 `;
 
 export const BoxContents = styled.div`
-    width: calc(100vw - 135px);
+    width: 100%;
     min-height: calc(100vh - 75px);
     position: relative;
     top: 75px;
@@ -54,3 +58,4 @@ export const InputSearchMovie = styled.input`
     color: rgba(232, 0, 97, 1);
     text-shadow: 1px 1px rgba(255, 255, 255, .5);
 `;
+

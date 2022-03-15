@@ -4,7 +4,8 @@ import { TitleContents } from "../MainContents/MainContestsStyle";
 import { BoxContents } from "../MainContents/MainContestsStyle";
 
 const DrawContents = () =>{
-
+    
+    //  Volta a tela para o inicio sempre a rota for alterada;
     useEffect(()=>{
         window.scroll(0, 0)
     }, [])

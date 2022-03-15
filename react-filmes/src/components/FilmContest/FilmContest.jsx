@@ -9,6 +9,7 @@ import Loading from "../Loading/Loading";
 const FilmContest = () =>{
     const [movieList, setMovieList] = useState([])
 
+    //  Volta a tela para o inicio sempre a rota for alterada;
     useEffect(()=>{
         window.scroll(0, 0)
     },[])

@@ -3,10 +3,15 @@ import styled from "styled-components";
 export const ContainerContests = styled.div`
     margin-left: 120px;
     min-height: 100vh;
-    width: calc(100% - 120px);
+    width: calc(100% - 125px);
 
     .watch-details{
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    }
+
+    @media (max-width: 525px){
+        width: calc(100% - 95px);
+        margin-left: 95px;
     }
 `;
 
@@ -21,6 +26,9 @@ export const TitleContents = styled.h2`
     position: fixed;
     z-index: 10;
     background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) , transparent );
+    @media (max-width: 525px){
+        width: calc(100vw - 95px);
+    }
 `;
 
 export const BoxContents = styled.div`

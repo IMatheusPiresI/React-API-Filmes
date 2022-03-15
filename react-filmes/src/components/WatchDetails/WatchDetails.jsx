@@ -1,16 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
 import { apiWatchDetailsMovies, apiWatchDetailsSeries } from "../../api/apiWatchDetails";
 import { DetailsContext } from "../../contexts/DetailsContext";
+import ButtonDetails from "../ButtonDetails/ButtonDetails";
 import Loading from "../Loading/Loading";
 import { ContainerContests, BoxContents, TitleContents } from "../MainContents/MainContestsStyle";
-import { ContainerDetails, BoxDetails, ShadowInfos, ShadowImage, TitleDetails, ContainerInfo, DescriptionDetails, BoxVoteYearSeason, VoteDetails, DateDetails, SeasonsDetails } from "./WatchDetailsStyle";
+import { ContainerDetails, BoxDetails, ShadowInfos, ShadowImage, TitleDetails, ContainerInfo, DescriptionDetails, BoxVoteYearSeason, VoteDetails, DateDetails, SeasonsDetails, BoxButtons, LinkA } from "./WatchDetailsStyle";
+import Language from '@material-ui/icons/Language'
+import Code from '@material-ui/icons/Code'
+import { useNavigate } from "react-router-dom";
 
 const WatchDetails = () =>{
     const [details, setDetails] = useState([]);
     const { slug, idFilm, type, video } = useContext(DetailsContext);
     const [date, setDate] = useState(0);
-    const [numberSeason, setNumberSeason] = useState(0)
-    const [season, setSeasons] = useState(0)
+    const [numberSeason, setNumberSeason] = useState('')
+    const navigate = useNavigate();
 
     useEffect(()=>{
         const Details = async() =>{
@@ -38,6 +42,7 @@ const WatchDetails = () =>{
                         console.log(res.data)
                         const releaseDate = new Date(res.data.release_date)
                         console.log(releaseDate)
+                        setNumberSeason('')
                         if(releaseDate !== undefined){
                             setDate(releaseDate.getFullYear())
                         }
@@ -50,12 +55,17 @@ const WatchDetails = () =>{
                         console.log(res.data.first_air_date)
                         const firstDate = new Date(res.data.first_air_date)
                         setDate(firstDate.getFullYear())
+                        if(res.data.number_of_seasons > 1){
+                            setNumberSeason(res.data.number_of_seasons + ' temporadas')
+                        }else{
+                            setNumberSeason(res.data.number_of_seasons + ' temporada')
+                        }
                         document.querySelector('#details').style.backgroundImage = "url('https://image.tmdb.org/t/p/original" + res.data.backdrop_path + "')";
                     })
                 }
             }
             Details();
-    },[idFilm, slug])
+    },[idFilm, slug, type, video])
 
     return(   
         <ContainerContests>
@@ -71,15 +81,32 @@ const WatchDetails = () =>{
                                     <BoxVoteYearSeason>
                                         <VoteDetails>{details.vote_average * 10}% relevante</VoteDetails>
                                         <DateDetails>{date}</DateDetails>
-                                        <SeasonsDetails>{details.number_of_seasons > 1 ? details.number_of_seasons + ' temporadas' : details.number_of_seasons + ' temporada'}</SeasonsDetails>
+                                        <SeasonsDetails>{numberSeason}</SeasonsDetails>
                                     </BoxVoteYearSeason>
                                     <DescriptionDetails>{details.overview}</DescriptionDetails>
+                                    <BoxButtons>
+
+                                        <LinkA href={details.homepage} target='_blank'>
+                                            <ButtonDetails
+                                                className={'website'}
+                                                name={'Visite o Site'}
+                                                icon={<Language/>}
+                                            />
+                                        </LinkA>
+
+                                        <ButtonDetails
+                                            className={'developer'}
+                                            name={'Developer'}
+                                            icon={<Code/>}
+                                            click={()=> navigate('/developer')}
+                                        />
+                                    </BoxButtons>
                                 </ContainerInfo>
                             </ShadowImage>
                         </ShadowInfos>
                     </BoxDetails>
-                 </ContainerDetails>
-                 : <Loading/>}
+                </ContainerDetails>
+                : <Loading/>}
             </BoxContents>
         </ContainerContests>
     )

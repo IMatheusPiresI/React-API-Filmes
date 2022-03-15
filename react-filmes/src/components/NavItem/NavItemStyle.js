@@ -24,6 +24,12 @@ export const BoxItem = styled.div`
         }
     }
 
+    @media (max-width: 525px) {
+        width: 75px;
+        height: 75px;
+        gao
+    }
+
 `;
 
 export const Icon = styled.div`

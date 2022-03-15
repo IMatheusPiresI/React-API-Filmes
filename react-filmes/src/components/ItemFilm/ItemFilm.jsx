@@ -76,11 +76,9 @@ export const ItemFilm = ({src, alt, slug, film, type, video}) =>{
         }
     }
     return(
-        <DetailsProvider>
-            <ItemFilms onClick={WatchDetails}>
-                <ImagePosterFilm src={src} alt={alt}/>
-            </ItemFilms>
-        </DetailsProvider>
+        <ItemFilms onClick={WatchDetails}>
+            <ImagePosterFilm src={src} alt={alt}/>
+        </ItemFilms>
     )
 }
 

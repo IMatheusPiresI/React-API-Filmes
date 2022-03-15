@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ContainerBody } from "./HomeStyle";
+import { ContainerBody, ContainerHeader } from "./HomeStyle";
 import Header from "../../components/Header/Header";
 import NavVertical from "../../components/NavVertical/NavVertical";
 import ParticleBackground from "../../components/ParticleBackgorund/ParticleBackground";
@@ -42,14 +42,20 @@ const Home = () =>{
     }, [])
     
     return(
-        <ContainerBody>
+        <>
+        <ContainerHeader>
             <ParticleBackground/>
+        
             <Header
                 acao={ativacor}
             />
             <NavVertical/>
+        </ContainerHeader>
+        <ContainerBody>
             <Outlet/>
         </ContainerBody>
+        </>
+        
     )
 }
 export default Home;

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { apiSearchMovie } from "../../api/apiSearchMovie/apiSearchMovie";
+import { apiSearchMovie } from "../../api/apiSearchMovie";
 import CardSearchFilm from "../CardSearchFilm/CardSearchFilm";
 import { ContainerContests, TitleContents, BoxContents, ContainerFilms, InputSearchMovie } from './MainContestsStyle'
 
 const MainContests = () =>{
     const [ response, setResponse ] = useState([])
-
+    
+    //  Volta a tela para o inicio sempre a rota for alterada;
     useEffect(()=>{
         window.scroll(0, 0)
     }, [])

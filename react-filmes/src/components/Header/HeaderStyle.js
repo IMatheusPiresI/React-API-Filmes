@@ -15,6 +15,10 @@ export const ContainerHeader = styled.nav`
     .link{
         text-decoration: none ;
     }
+
+    @media (max-width: 525px) {
+        width: 95px;
+    }
 `;
 
 export const Logo = styled.img`
@@ -26,6 +30,6 @@ export const Logo = styled.img`
 
 export const BoxLogo = styled.div`
     position: absolute;
-    left: 30px ;
+    left: 18px ;
     display: flex;
 `;

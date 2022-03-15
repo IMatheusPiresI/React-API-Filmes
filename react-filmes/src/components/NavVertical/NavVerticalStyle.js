@@ -30,4 +30,16 @@ export const ContainerNav = styled.nav`
         font-size: 45px;
         transition: ease .4s;
     }
+
+    @media (max-width: 525px) {
+        width: 95px;
+
+        .icon svg{
+            font-size: 35px;
+        }
+
+        .icon-clicked svg{
+            font-size: 40px;
+        }
+    }
 `;

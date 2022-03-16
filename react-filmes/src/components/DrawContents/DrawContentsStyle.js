@@ -48,8 +48,7 @@ export const BoxCardSortear = styled.div`
 `;
 
 export const BoxCard = styled.div`
-    position: relative;
-    top: 80px;
+    margin-top: 90px;
 `;
 
 export const BoxDrawButton = styled.div`

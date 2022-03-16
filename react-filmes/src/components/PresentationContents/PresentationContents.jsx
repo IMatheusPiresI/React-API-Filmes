@@ -1,17 +1,90 @@
 import React, { useEffect } from "react";
 import { ContainerContests, TitleContents, BoxContents } from "../SearchMovieContents/SearchMovieStyle";
+import logonetflix from '../../images/logonetflix.png'
+import { ContainerCardPresentation, CardPresentation, BoxImage, ImageLogo, TitleCardPresentation } from "./PresentationContentsStyle";
 
 const PresentationContents = () =>{
 
     useEffect(()=>{
-        window.scroll(0, 0)
+        window.scroll(0, 0)     
     }, [])
+
+    useEffect(()=>{
+        const text = document.querySelector('#write-title')
+        const textTwo = document.querySelector('#write-title-two')
+        const tmdb = document.querySelector("#tmdb")
+        const github = document.querySelector("#github")
+        const netflix = document.querySelector("#netflix")
+        const navVertical = document.querySelector("#nav-vertical")
+        text.style.display = 'none'
+        textTwo.style.display = 'none'
+        tmdb.style.display = 'none'
+        github.style.display = 'none'
+        netflix.style.display = 'none'
+        navVertical.style.display = 'none'
+        
+        function maquinaEscrever(texto){
+            const textoArray = texto.innerHTML.split('');
+            texto.innerHTML = '';
+            textoArray.forEach((letra, index) =>{
+                setTimeout(() => {
+                texto.style.opacity = 1
+                texto.innerHTML += letra
+                }, 65 * index);
+            })
+        }
+       setTimeout(()=>{
+            text.style.display = 'flex'
+            maquinaEscrever(text)
+
+            setTimeout(()=>{
+                textTwo.style.display = 'flex'
+                maquinaEscrever(textTwo)
+            }, 7500)
+
+            setTimeout(()=>{
+                tmdb.style.display = 'flex'
+                tmdb.style.animation = "image .9s forwards";
+            },11000)
+
+            setTimeout(()=>{
+                github.style.display = 'flex'
+                github.style.animation = "image .9s forwards";
+            }, 11600)
+            
+            setTimeout(()=>{
+                netflix.style.display = 'flex'
+                netflix.style.animation = "image .9s forwards";
+            }, 12800)
+
+            setTimeout(()=>{
+                navVertical.style.display = 'flex'
+                maquinaEscrever(navVertical)
+            }, 13400)
+       }, 1500)
+    })
+
 
     return(
         <ContainerContests>
             <TitleContents data-title = 'title'>Apresentação</TitleContents>
             <BoxContents>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis iure architecto totam. Omnis blanditiis atque quis unde quidem magnam. Animi corporis autem vitae cum ducimus voluptatum excepturi corrupti non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis officia nisi et eum explicabo excepturi saepe unde natus perferendis dolorem dolore ducimus esse, sunt beatae neque itaque sapiente quisquam iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nesciunt, numquam modi, accusamus eum, debitis voluptate deserunt dicta odio voluptatem quae doloribus repellendus aliquid dolorum repudiandae harum fuga tenetur odit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ducimus consequuntur quisquam nihil, ipsam culpa rem voluptate vitae magni eos laboriosam tempora quidem facilis illo itaque facere velit, ipsa iusto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis nam natus expedita error, voluptas architecto atque in repellat at inventore nihil iure reprehenderit! Doloremque vitae cumque aliquam vero dicta neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aut, nisi provident, porro nobis quibusdam illo consequuntur sed tenetur aperiam cum itaque culpa perspiciatis earum eligendi possimus suscipit similique dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium reiciendis laboriosam eaque reprehenderit quidem! Odio tempore nobis necessitatibus, quod at soluta vero eveniet placeat voluptatibus error, porro temporibus earum ex. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit quo beatae commodi, ex ducimus eligendi quod veritatis ea tenetur aut nihil repellat, id adipisci ipsum sed modi rerum quia? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nemo aperiam dignissimos officia, tempore quidem consequuntur corrupti ut. Libero quas repudiandae doloribus non! Animi magni maxime at deleniti error tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nemo impedit aliquid qui consequuntur enim tempora, nam eligendi sint corrupti itaque obcaecati, repellendus dolor pariatur eius. Officiis omnis quibusdam nemo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptate, laudantium architecto magni doloribus, nulla, quod modi nihil voluptatum laboriosam magnam neque sapiente. Facere ducimus adipisci assumenda velit quia voluptatum.</p>
+                <ContainerCardPresentation>
+                        <CardPresentation>
+                                <TitleCardPresentation id='write-title'>Olá, bem vindo ao projeto de filmes desenvolvido para fins didáticos e aprimoramento dos conhecimentos em React.</TitleCardPresentation>
+                                <TitleCardPresentation id='write-title-two'>Projeto criado utilizando a API do The Movie Database, Github e conteúdos da Netflix.</TitleCardPresentation>
+                                <BoxImage>
+                                    <ImageLogo id='tmdb' src={'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg'}/>
+                                    <ImageLogo id='netflix' src={logonetflix}/>
+                                    <ImageLogo id='github' src={'https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png'}/>
+                                </BoxImage>
+                                <TitleCardPresentation id='nav-vertical'>Veja mais do projeto utilizando o menu vertical.</TitleCardPresentation>
+                        </CardPresentation>
+                </ContainerCardPresentation>
+
+                    {/* <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="" />
+                    <img src={logonetflix} alt="" />
+                    <img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" alt="" /> */}
             </BoxContents>
         </ContainerContests>
     )

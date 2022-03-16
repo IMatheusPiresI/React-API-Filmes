@@ -6,29 +6,42 @@ export const ContainerDetails = styled.div`
 `;
 
 export const BoxDetails = styled.div`
-    width: 100%;
+    width: calc(100vw - 120px);
     height: calc(100vh - 75px);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-clip: border-box;
     z-index: 0;
+
+    @media (max-width: 525px){
+        width: calc(100vw - 95px);
+    }
 `;
 
 export const ShadowInfos = styled.div`
-    width: 100%;
+    width: calc(100vw - 120px);
     height: 100%;
     position: absolute;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .87) 30%, transparent 70%);
     z-index: 1;
+
+    
+    @media (max-width: 525px){
+        width: calc(100vw - 95px);
+    }
 `;
 
 export const ShadowImage = styled.div`
-    width: 100%; 
+    width: calc(100vw - 120px);
     height: 100%;
     position: absolute;
     background-image: linear-gradient(to top, rgba(0, 0, 0, .87) 30%, transparent 70%);
     z-index: 1;
+
+    @media (max-width: 525px){
+        width: calc(100vw - 95px);
+    }
 `;
 
 export const TitleDetails = styled.h2`

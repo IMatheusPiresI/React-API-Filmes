@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TitleContents, BoxContents, ContainerContests } from "../MainContents/MainContestsStyle";
+import { TitleContents, BoxContents, ContainerContests } from "../SearchMovieContents/SearchMovieStyle";
 import { SectionMovies } from "./FilmContestStyle";
 import apiHomePage from "../../api/apiHomePage";
 import MovieRow from "../MovieRow/MovieRow";

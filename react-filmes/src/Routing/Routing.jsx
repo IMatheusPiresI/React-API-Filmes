@@ -4,8 +4,8 @@ import Home from "../layout/Home/Home";
 import DeveloperContents from "../components/DeveloperContents/DeveloperContents";
 import DrawContents from "../components/DrawContents/DrawContents";
 import FilmContest from "../components/FilmContest/FilmContest";
-import MainContests from "../components/MainContents/MainContests";
-import NetflixContest from "../components/NetflixContest/NetflixContest";
+import SearchMovieContents from "../components/SearchMovieContents/SearchMovie";
+import PresentationContents from "../components/PresentationContents/PresentationContents";
 import WatchDetails from "../components/WatchDetails/WatchDetails";
 import { DetailsProvider } from "../contexts/DetailsContext";
 
@@ -15,9 +15,9 @@ const Routing = () =>{
             <BrowserRouter>
                 <Routes>
                     <Route exact path='/' element={<Home/>}>
-                        <Route exact path='/search' element={<MainContests/>}/>
-                        <Route path='/' element={<FilmContest/>}/>
-                        <Route path='/netflix' element={<NetflixContest/>}/>
+                        <Route path='/' element={<PresentationContents/>}/>
+                        <Route path='/film' element={<FilmContest/>}/>
+                        <Route exact path='/search' element={<SearchMovieContents/>}/>
                         <Route path='/draw' element={<DrawContents/>}/>
                         <Route path='/developer' element={<DeveloperContents/>}/>
                         <Route path='/:type/:id' element={<WatchDetails/>}/>

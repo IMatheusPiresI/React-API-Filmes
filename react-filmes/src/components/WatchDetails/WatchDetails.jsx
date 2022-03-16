@@ -3,7 +3,7 @@ import { apiWatchDetailsMovies, apiWatchDetailsSeries } from "../../api/apiWatch
 import { DetailsContext } from "../../contexts/DetailsContext";
 import ButtonDetails from "../ButtonDetails/ButtonDetails";
 import Loading from "../Loading/Loading";
-import { ContainerContests, BoxContents, TitleContents } from "../MainContents/MainContestsStyle";
+import { ContainerContests, BoxContents, TitleContents } from "../SearchMovieContents/SearchMovieStyle";
 import { ContainerDetails, BoxDetails, ShadowInfos, ShadowImage, TitleDetails, ContainerInfo, DescriptionDetails, BoxVoteYearSeason, VoteDetails, DateDetails, SeasonsDetails, BoxButtons, LinkA } from "./WatchDetailsStyle";
 import Language from '@material-ui/icons/Language'
 import Code from '@material-ui/icons/Code'

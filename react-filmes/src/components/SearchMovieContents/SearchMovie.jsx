@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { apiSearchMovie } from "../../api/apiSearchMovie";
 import CardSearchFilm from "../CardSearchFilm/CardSearchFilm";
-import { ContainerContests, TitleContents, BoxContents, ContainerFilms, InputSearchMovie } from './MainContestsStyle'
+import { ContainerContests, TitleContents, BoxContents, ContainerFilms, InputSearchMovie } from './SearchMovieStyle'
 
-const MainContests = () =>{
+const SearchMovieContents = () =>{
     const [ response, setResponse ] = useState([])
     
     //  Volta a tela para o inicio sempre a rota for alterada;
@@ -55,4 +55,4 @@ const MainContests = () =>{
     )
 }
 
-export default MainContests;
+export default SearchMovieContents;

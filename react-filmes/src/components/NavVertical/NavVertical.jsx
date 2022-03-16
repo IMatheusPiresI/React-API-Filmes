@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Navitem from "../NavItem/Navitem";
 import { ContainerNav } from "./NavVerticalStyle";
 import { ImFilm } from 'react-icons/im'
-import { RiNetflixFill } from 'react-icons/ri'
+import { RiSearchEyeLine } from 'react-icons/ri'
 import { MdOutlineDeviceUnknown } from 'react-icons/md'
-import { BsPersonBadge } from 'react-icons/bs'
+import Code from '@material-ui/icons/Code';
 
 const NavVertical = () =>{
     //  Adiciona uma sombra destacada ao ícone selecionado para exibição;
@@ -22,13 +22,13 @@ const NavVertical = () =>{
     return(
         <ContainerNav>
             <Navitem
-                path={'/search'}
+                path={'/film'}
                 icon={<ImFilm/>}
             />
 
             <Navitem
-                path={'/netflix'}
-                icon={<RiNetflixFill/>}
+                path={'/search'}
+                icon={<RiSearchEyeLine/>}
             />
 
             <Navitem
@@ -38,7 +38,7 @@ const NavVertical = () =>{
 
             <Navitem
                 path={'/developer'}
-                icon={<BsPersonBadge/>}
+                icon={<Code/>}
             />
         </ContainerNav>
     )

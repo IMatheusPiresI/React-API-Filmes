@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { apiGithubRepos, apiGithubUser } from "../../api/apiGithub";
-import { ContainerContests, TitleContents, BoxContents } from "../MainContents/MainContestsStyle";
+import { ContainerContests, TitleContents, BoxContents } from "../SearchMovieContents/SearchMovieStyle";
 import { ContainerDeveloper, BoxCloneGit, ContainerCloneGit, BoxImageDescription, BoxRepos, ImageDeveloper, BoxInfoDeveloper, Name, NameUser, Bio, Location, Blog, LinkA } from "./DeveloperContentsStyle";
 import Line from "../Line/Line";
 import NavGithubRepos from "../NavGitHubRepos/NavGithubRepos";

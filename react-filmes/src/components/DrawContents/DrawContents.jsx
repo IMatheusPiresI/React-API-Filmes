@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ContainerContests, TitleContents, BoxContents } from "../MainContents/MainContestsStyle";
+import { ContainerContests, TitleContents, BoxContents } from "../SearchMovieContents/SearchMovieStyle";
 import { ContainerDraw, ImageDraw, BoxImageDraw, BoxCardSortear, BoxDrawButton, DrawTitle, DrawButton, BoxCard } from "./DrawContentsStyle";
 import Line from "../Line/Line";
 import { apiDrawSerie } from "../../api/apiDrawSerie";

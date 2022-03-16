@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerRow = styled.div`
     width: calc(100vw - 135px);
-    animation: Visible .5s ease-in-out;
+    animation: Visible .8s ease-in-out;
 
     .icon{
         color: rgba(232, 0, 97, 1);
@@ -20,6 +20,10 @@ export const ContainerRow = styled.div`
         100%{
             opacity: 1;
         }
+    }
+
+    @media (max-width: 525px){
+        width: calc(100vw - 95px);
     }
 `;
 

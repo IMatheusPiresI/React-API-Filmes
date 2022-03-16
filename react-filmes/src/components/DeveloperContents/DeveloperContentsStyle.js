@@ -4,10 +4,23 @@ export const ContainerDeveloper = styled.section`
     width: 100%;
     height: 100%;
     padding: 3em 0em 0em 0em;
+    animation: Visible .5s ease-in-out;
 
     .line{
         position: relative;
         top: 52px;
+    }
+
+    @keyframes Visible{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 `;
 
@@ -50,6 +63,10 @@ export const BoxImageDescription = styled.div`
     @media (max-width: 525px) {
         max-width: 100%;
     }
+
+    @media (max-width: 420px) {
+        padding: 2.5em 0em 0em 0em;
+    }
 `;
 
 export const BoxRepos = styled.div`
@@ -60,6 +77,23 @@ export const BoxRepos = styled.div`
     @media (max-width: 900px) {
         margin-top: 2em;
     }
+
+    
+    @media (max-width: 420px) {
+        padding: 0em .5em;
+    }
+
+    @media (max-width: 340px) {
+        padding: 0em .5em;
+    }
+
+    @media (max-width: 295px) {
+        padding: 0em .2em;
+    }
+`;
+
+export const LinkA = styled.a`
+    text-decoration: none;
 `;
 
 export const ImageDeveloper = styled.img`
@@ -70,6 +104,13 @@ export const ImageDeveloper = styled.img`
     position: relative;
     top: -30px;
     box-shadow: 0px 0px 10px 1px rgba(237, 0, 97, .8);
+    transform: scale(.95);
+    transition: .35s ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1);
+    }
 
     @media (max-width: 525px) {
         max-width: 100%;
@@ -94,6 +135,14 @@ export const Name = styled.p`
     @media (max-width: 525px) {
         font-size: 30px;
     }
+
+    @media (max-width: 340px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 305px) {
+        font-size: 19px;
+    }
 `;
 
 export const NameUser = styled.p`
@@ -106,6 +155,13 @@ export const NameUser = styled.p`
         font-size: 19px;
     }
     
+    @media (max-width: 340px) {
+        font-size: 17px;
+    }
+
+    @media (max-width: 305px) {
+        font-size: 13px;
+    }
 `;
 
 export const Bio = styled.p`
@@ -116,6 +172,10 @@ export const Bio = styled.p`
 
     @media (max-width: 525px) {
         font-size: 17px;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 15px;
     }
 `;
 
@@ -131,6 +191,11 @@ export const Location = styled.p`
 
     @media (max-width: 525px) {
         font-size: 15px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 12px;
+        margin-left: 5px;
     }
 `;
 
@@ -153,4 +218,19 @@ export const Blog = styled.a`
         font-size: 15px;
     }
 
+    @media (max-width: 420px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 10px;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 8px;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 8px;
+    }
 `;

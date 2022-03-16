@@ -13,6 +13,11 @@ export const ContainerLoading = styled.div`
     align-items: center;
     z-index: 10;
     background-color: rgb(233,57,120);
+
+    @media (max-width:525px) {
+        width: calc(100vw - 95px);
+        left: 95px;
+    }
 `;
 
 export const ImageLoading = styled.img`
@@ -21,4 +26,8 @@ export const ImageLoading = styled.img`
     bottom: 0;
     left: 120px;
     right: 0;
+
+    @media (max-width: 350px) {
+        width: 100px;
+    }
 `;

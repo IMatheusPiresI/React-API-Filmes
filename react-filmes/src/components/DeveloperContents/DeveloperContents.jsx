@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { apiGithubRepos, apiGithubUser } from "../../api/apiGithub";
 import { ContainerContests, TitleContents, BoxContents } from "../MainContents/MainContestsStyle";
-import { ContainerDeveloper, BoxCloneGit, ContainerCloneGit, BoxImageDescription, BoxRepos, ImageDeveloper, BoxInfoDeveloper, Name, NameUser, Bio, Location, Blog } from "./DeveloperContentsStyle";
+import { ContainerDeveloper, BoxCloneGit, ContainerCloneGit, BoxImageDescription, BoxRepos, ImageDeveloper, BoxInfoDeveloper, Name, NameUser, Bio, Location, Blog, LinkA } from "./DeveloperContentsStyle";
 import Line from "../Line/Line";
 import NavGithubRepos from "../NavGitHubRepos/NavGithubRepos";
 import { RiGitRepositoryLine } from 'react-icons/ri'
@@ -17,7 +17,7 @@ const DeveloperContents = () =>{
     //  Volta a tela para o inicio sempre a rota for alterada;
     useEffect(()=>{
         window.scroll(0, 0)
-    }, [])
+    },[])
 
     //  Requisição API de repositórios do Github
     useEffect(()=>{
@@ -52,7 +52,7 @@ const DeveloperContents = () =>{
 
                         <ContainerCloneGit>
                             <BoxImageDescription>
-                                    <ImageDeveloper src={infoUser.avatar_url} />
+                                   <LinkA href={infoUser.html_url} target='_blank'><ImageDeveloper src={infoUser.avatar_url} /></LinkA>
                                     <BoxInfoDeveloper>
                                             <Name>{infoUser.name}</Name>
                                             <NameUser>{infoUser.login}</NameUser>
@@ -82,6 +82,7 @@ const DeveloperContents = () =>{
                                 })}
                             </BoxRepos>
                             {repos.length <= 0 && <Loading/>}
+                            {infoUser.length <= 0 && <Loading/>}
                         </ContainerCloneGit>
                     <BoxCloneGit>
 

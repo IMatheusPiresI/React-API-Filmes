@@ -5,9 +5,12 @@ export const ContainerRepos = styled.div`
     border-top: 1px solid rgba(237, 0, 97, .5);
     text-align: justify;
     padding: 1.5em 0em;
-
     &:last-child{
         border-bottom: 1px solid rgba(237, 0, 97, .5);
+    }
+
+    @media (max-width: 340px) {
+        width: 100%;
     }
 `;
 
@@ -32,6 +35,20 @@ export const TitleRepos = styled.a`
     @media (max-width: 525px) {
         font-size: 22px;
     }
+
+        
+    @media (max-width: 360px) {
+        font-size: 19px;
+    }
+
+    @media (max-width: 340px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 295px) {
+        font-size: 13px;
+    }
+
 `;  
 
 export const Public = styled.p`
@@ -42,6 +59,10 @@ export const Public = styled.p`
     font-size: 11px;
     color: rgba(237, 0, 97, .7);
     background-color: rgba(0, 0, 0, .3);
+
+    @media (max-width: 340px) {
+        margin-left: 5px;
+    }
 `;
 
 export const DescriptionRepos = styled.p`
@@ -52,6 +73,14 @@ export const DescriptionRepos = styled.p`
 
     @media (max-width: 525px) {
         font-size: 15px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 13px;
+    }
+
+    @media (max-width: 295px) {
+        font-size: 11px;
     }
 `;
 

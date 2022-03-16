@@ -29,7 +29,5 @@ export const Logo = styled.img`
 `;
 
 export const BoxLogo = styled.div`
-    position: absolute;
-    left: 18px ;
     display: flex;
 `;

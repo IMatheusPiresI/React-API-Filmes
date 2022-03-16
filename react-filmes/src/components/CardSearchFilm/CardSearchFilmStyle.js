@@ -11,6 +11,7 @@ export const CardSearch = styled.div`
     box-shadow: 1px -4px 10px 1px rgba(232, 0, 97, .8) ;
     transform: scale(.95);
     transition: .2s ease;
+    cursor: pointer;
 
 
 

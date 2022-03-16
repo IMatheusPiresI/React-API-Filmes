@@ -42,9 +42,11 @@ const MainContests = () =>{
                             key={film.id}
                             id={film.id}
                             title={film.title}
-                            img={`https://image.tmdb.org/t/p/original${film.poster_path !== null ? film.poster_path : film.backdrop_path}`}
+                            img={`https://image.tmdb.org/t/p/w500${film.poster_path !== null ? film.poster_path : film.backdrop_path}`}
                             synopsis={film.overview !== "" ? film.overview : "Não encontramos nenhuma sinopse para esse filme em nosso banco de dados."}
                             adult={film.adult}
+                            idMovie={film.id}
+                            videoFilm={film.video}
                         />
                     })}
                     </ContainerFilms>

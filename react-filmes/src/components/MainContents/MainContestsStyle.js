@@ -18,6 +18,9 @@ export const ContainerContests = styled.div`
 export const TitleContents = styled.h2`
     font-size: 45px;
     text-shadow: -1px 1px #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgba(232, 0, 97, 1);
     height: 75px;
     width: calc(100vw - 120px);
@@ -29,6 +32,11 @@ export const TitleContents = styled.h2`
     @media (max-width: 525px){
         width: calc(100vw - 95px);
     }
+
+
+    @media (max-width: 380px){
+        font-size: 30px;
+    }
 `;
 
 export const BoxContents = styled.div`
@@ -39,7 +47,8 @@ export const BoxContents = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
+
+;`
 
 
 export const ContainerFilms = styled.div`

@@ -11,7 +11,8 @@ export const ContainerNav = styled.nav`
     align-items: center;
     justify-content: space-around;
     position: fixed;
-    gap: 40px;
+    gap: 12px;
+    padding: 10px 0px;
     left: 0;
     z-index: 2 ;
     .item-clicked{

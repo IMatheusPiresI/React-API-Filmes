@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerRow = styled.div`
     width: calc(100vw - 135px);
-    animation: Visible .8s ease-in-out;
+    animation: Visible 1.5s ease;
     margin: 20px 0px;
 
     .icon{
@@ -15,7 +15,7 @@ export const ContainerRow = styled.div`
         0%{
             opacity: 0;
         }
-        50%{
+        70%{
             opacity: 0;
         }
         100%{

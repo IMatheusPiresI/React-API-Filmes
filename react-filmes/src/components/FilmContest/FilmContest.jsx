@@ -41,7 +41,7 @@ const FilmContest = () =>{
                         )
                     })}
                 </SectionMovies>
-                {movieList <= 0 && <Loading/>}
+                {movieList <= 7 && <Loading/>}
             </BoxContents>
         </ContainerContests>
     )

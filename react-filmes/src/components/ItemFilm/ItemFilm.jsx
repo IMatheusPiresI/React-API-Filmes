@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ItemFilms, ImagePosterFilm } from "./ItemFilmStyle";
 import { useNavigate } from "react-router-dom";
-import { DetailsProvider, DetailsContext } from "../../contexts/DetailsContext";
+import { DetailsContext } from "../../contexts/DetailsContext";
 
 export const ItemFilm = ({src, alt, slug, film, type, video}) =>{
     const navigate = useNavigate()
@@ -66,7 +66,7 @@ export const ItemFilm = ({src, alt, slug, film, type, video}) =>{
                 setVideo(video)
             break;
 
-            case 'documentary':
+            default:
                 navigate(`/documentary/${film}`)
                 setIdFilm(film)
                 setSlug('originals')

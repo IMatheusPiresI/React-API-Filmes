@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ContainerContests, TitleContents, BoxContents } from "../SearchMovieContents/SearchMovieStyle";
-import { ContainerDraw, ImageDraw, BoxImageDraw, BoxCardSortear, BoxDrawButton, DrawTitle, DrawButton, BoxCard } from "./DrawContentsStyle";
-import Line from "../Line/Line";
+import { ContainerDraw, BoxCardSortear, BoxDrawButton, DrawTitle, DrawButton, BoxCard } from "./DrawContentsStyle";
 import { apiDrawSerie } from "../../api/apiDrawSerie";
 import CardSearchFilm from '../CardSearchFilm/CardSearchFilm'
 import LoadingDrawMovie from "../LoadingDrawMovie/LoadingDrawMovie";
 
 const DrawContents = () =>{
-    const [drawSerie, setDrawSerie] = useState([])
+    const [drawSerie, setDrawSerie] = useState()
     const [image, setImage] = useState('')
 
     //  Volta a tela para o inicio sempre a rota for alterada;
@@ -19,7 +18,6 @@ const DrawContents = () =>{
         const InitDraw = async() =>{
             const getDraw = localStorage.getItem('draw');
             console.log(getDraw)
-            console.log(drawSerie)
             if(getDraw){
                 if(getDraw !== null){
                     await apiDrawSerie(getDraw)
@@ -33,7 +31,7 @@ const DrawContents = () =>{
                             setImage(`https://image.tmdb.org/t/p/w500${res.data.backdrop_path}`)
                         }
                     })
-                    .catch((err) =>{
+                    .catch(() =>{
                         const errorTratament = async() =>{
                             await apiDrawSerie(409)
                             .get()
@@ -48,13 +46,14 @@ const DrawContents = () =>{
                             })
                         }
                         errorTratament();
-                        
                     })
                 }
             }
         }
         InitDraw();
+    }, [])
 
+    useEffect(()=>{
         document.querySelector('#draw').addEventListener('click', () =>{
             const draw = (Math.ceil(Math.random() * 1000));
             localStorage.setItem('draw', JSON.stringify(draw))
@@ -93,9 +92,6 @@ const DrawContents = () =>{
                 <TitleContents data-title = 'title'>Sortear Filme</TitleContents>
                <BoxContents>
                     <ContainerDraw>
-                            <Line 
-                                className={'line'}
-                            />
                             <BoxDrawButton>
                                 <DrawTitle>Procurando um filme para assistir?</DrawTitle>
                                 <DrawTitle>Deixe que nós escolhemos para você!</DrawTitle>
@@ -112,7 +108,6 @@ const DrawContents = () =>{
                                         adult={drawSerie.adult}
                                         idMovie={drawSerie.id}
                                         videoFilm={drawSerie.video}
-                                        className={'animate-card'}
                                     />             
                                     :  <BoxCardSortear> <LoadingDrawMovie/> </BoxCardSortear>
                                     }

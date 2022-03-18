@@ -11,6 +11,7 @@ export const CardSearch = styled.div`
     box-shadow: 1px -4px 10px 1px rgba(232, 0, 97, .8) ;
     transform: scale(.95);
     transition: .2s ease;
+    align-items: center;
     cursor: pointer;
 
 
@@ -19,8 +20,16 @@ export const CardSearch = styled.div`
         transform: scale(1);
         img{
             transform: scale(1.015);
-            box-shadow: 1px 1px 5px 0px rgba(232, 0, 97, 1) ;;
+            box-shadow: 1px 1px 5px 0px rgba(232, 0, 97, 1);
         }
+    }
+
+    @media (max-width: 895px){
+        width: 100%
+    }
+
+    @media (max-width: 675px){
+        width: 100%
     }
 `;
 
@@ -30,9 +39,12 @@ export const TitleCard = styled.h2`
     width: 100%;
     padding: 0px 20px;
     font-size: 28px;
-    padding-right: 10px;
     margin-top: 20px;
     margin-bottom: 40px;
+
+    @media (max-width: 595px){
+        font-size: 23px;
+    }
 `;
 
 export const PosterCard = styled.img`
@@ -41,7 +53,7 @@ export const PosterCard = styled.img`
     margin: 0px 15px 0px 0px;
     transform:  scale(.95);
     transition: .2s ease;
-    box-shadow: 1px 1px 20px 0px rgba(232, 0, 97, 1) ;;
+    box-shadow: 1px 1px 20px 0px rgba(232, 0, 97, 1);
 `;
 
 export const SynopsisCard = styled.p`
@@ -52,6 +64,10 @@ export const SynopsisCard = styled.p`
     padding-right: 20px;
     margin-left: 10px;
     margin-bottom: 25px;
+
+    @media (max-width: 595px){
+        font-size: 16px;
+    }
 `;
 
 export const BoxPoster = styled.div`
@@ -63,6 +79,19 @@ export const BoxPoster = styled.div`
     border-right: 1px solid rgba(232, 0, 97, 1);
     border-bottom: 1px solid rgba(232, 0, 97, 1);
     overflow-x: hidden;
+
+    @media (max-width: 895px){
+        width: 250px;
+        float: center;
+        border-radius: 15px 15px 0px 0px;
+        overflow: hidden;
+
+    }
+
+    @media (max-width: 675px){
+        width: 100%;
+        margin-bottom: 30px;
+    }
 `;
 
 export const AdultBox = styled.div`

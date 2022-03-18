@@ -27,7 +27,11 @@ export const BoxItem = styled.div`
     @media (max-width: 525px) {
         width: 75px;
         height: 75px;
-        gao
+    }
+
+    @media (max-width: 390px) {
+        width: 65px;
+        height: 70px;
     }
 
 `;

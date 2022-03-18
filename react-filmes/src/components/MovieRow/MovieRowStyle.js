@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerRow = styled.div`
     width: calc(100vw - 135px);
     animation: Visible .8s ease-in-out;
+    margin: 20px 0px;
 
     .icon{
         color: rgba(232, 0, 97, 1);
@@ -32,6 +33,31 @@ export const TitleSession = styled.h2`
     color: rgba(232, 0, 97, 1);
     text-shadow: -1px 1px #FFF;
     margin-left: 25px;
+
+    @media (max-width: 800px){
+        font-size: 28px;
+    }
+
+    @media (max-width: 600px){
+        font-size: 24px;
+    }
+
+    @media (max-width: 500px){
+        font-size: 22px;
+        margin-left: 25px;
+    }
+
+    @media (max-width: 400px){
+        font-size: 20px;
+    }
+
+    @media (max-width: 340px){
+        font-size: 18px;
+    }
+
+    @media (max-width: 315px){
+        font-size: 15px;
+    }
 `;
 
 export const MovieListArea = styled.div`
@@ -45,6 +71,10 @@ export const MovieListArea = styled.div`
         .row-rigth{
             opacity: 1;
         }
+    }
+
+    @media (max-width: 500px){
+        padding-left: 25px;
     }
 `;
 

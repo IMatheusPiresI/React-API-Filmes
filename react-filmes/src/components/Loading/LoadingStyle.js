@@ -18,6 +18,12 @@ export const ContainerLoading = styled.div`
         width: calc(100vw - 95px);
         left: 95px;
     }
+
+    
+    @media (max-width:390px) {
+        width: calc(100vw - 75px);
+        left: 75px;
+    }
 `;
 
 export const ImageLoading = styled.img`

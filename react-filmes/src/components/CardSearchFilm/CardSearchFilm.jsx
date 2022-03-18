@@ -9,7 +9,7 @@ function CardSearchFilm({title, img, synopsis, adult, className, idMovie, videoF
     const [ image, setImage] = useState('')
     const [ id, setId] = useState(0)
     const navigate = useNavigate()
-    const {setIdFilm, setSlug, setType, setVideo} = useContext(DetailsContext);
+    const {setIdFilm, setVideo} = useContext(DetailsContext);
 
     const watchDetails = () =>{
         navigate(`/movie/${idMovie}`)

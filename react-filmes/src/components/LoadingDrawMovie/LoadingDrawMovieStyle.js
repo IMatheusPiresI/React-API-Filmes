@@ -15,6 +15,14 @@ export const ImageDraw = styled.img`
             transform: rotateY(360deg);
         }
     }
+
+    @media (max-width: 465px){
+        width: 100px;
+    }
+
+    @media (max-width: 320px){
+        width: 80px;
+    }
 `;
 
 export const BoxImageDraw = styled.div`
@@ -42,5 +50,15 @@ export const BoxImageDraw = styled.div`
         100%{
             opacity: 1;
         }
+    }
+
+    @media (max-width: 465px){
+        margin: .5em 1em;
+        padding: 20px 30px;
+    }
+
+    @media (max-width: 320px){
+        margin: .5em .5em;
+        padding: 10px 20px;
     }
 `;

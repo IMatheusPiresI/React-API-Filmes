@@ -13,6 +13,12 @@ export const ContainerContests = styled.div`
         width: calc(100% - 95px);
         margin-left: 95px;
     }
+
+    
+    @media (max-width: 390px){
+        width: calc(100% - 75px);
+        margin-left: 75px;
+    }
 `;
 
 export const TitleContents = styled.h2`
@@ -33,6 +39,9 @@ export const TitleContents = styled.h2`
         width: calc(100vw - 95px);
     }
 
+    @media (max-width: 390px) {
+        width: calc(100vw - 75px);
+    }
 
     @media (max-width: 380px){
         font-size: 30px;
@@ -61,6 +70,7 @@ export const ContainerFilms = styled.div`
     flex-wrap: wrap;
     gap: 52px;
     padding: 2em 1em;
+    margin-top: 5em;
 `;
 
 export const InputSearchMovie = styled.input`
@@ -74,5 +84,24 @@ export const InputSearchMovie = styled.input`
     margin-top: 25px;
     color: rgba(232, 0, 97, 1);
     text-shadow: 1px 1px rgba(255, 255, 255, .5);
+
+    &::placeholder{
+        color: rgba(232, 0, 97, 1);
+    }
+
+    @media (max-width: 495px) {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    @media (max-width: 320px) {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    @media (max-width: 290px) {
+        width: 90%;
+        font-size: 16px;
+    }
 `;
 

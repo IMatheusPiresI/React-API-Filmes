@@ -19,6 +19,10 @@ export const ContainerHeader = styled.nav`
     @media (max-width: 525px) {
         width: 95px;
     }
+
+    @media (max-width: 390px) {
+        width: 75px;
+    }
 `;
 
 export const Logo = styled.img`
@@ -26,6 +30,12 @@ export const Logo = styled.img`
     height: 60px;
     border-radius: 50%;
     cursor: pointer;
+    transform: scale(.9);
+    transition: ease .3s;
+
+    &:hover{
+        transform: scale(1);
+    }
 `;
 
 export const BoxLogo = styled.div`

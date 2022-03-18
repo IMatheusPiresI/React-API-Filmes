@@ -43,4 +43,16 @@ export const ContainerNav = styled.nav`
             font-size: 40px;
         }
     }
+
+    @media (max-width: 390px) {
+        width: 75px;
+
+        .icon svg{
+            font-size: 35px;
+        }
+
+        .icon-clicked svg{
+            font-size: 40px;
+        }
+    }
 `;

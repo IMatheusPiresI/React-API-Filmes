@@ -18,7 +18,10 @@ const WatchDetails = () =>{
     const [genres, setGenres] = useState([]);
     const [description, setDescription] = useState('');
     const [viewModal, setViewModal] = useState(false);
+    const [watch, setWatch] = useState('')
     const navigate = useNavigate();
+    
+
 
     useEffect(()=>{
         const Details = async() =>{
@@ -30,11 +33,10 @@ const WatchDetails = () =>{
                 const videoFilm = await JSON.parse(localStorage.getItem('video'));
                 
                 if(videoFilm === false || videoFilm === true){
+                    setWatch('Filme')
                     await apiWatchDetailsMovies(film).get().then(res =>{
                         setDetails(res.data)
-                        console.log(res.data)
                         const releaseDate = new Date(res.data.release_date)
-                        console.log(releaseDate)
                         setNumberSeason('')
                         if(releaseDate !== undefined){
                             setDate(releaseDate.getFullYear())
@@ -61,9 +63,8 @@ const WatchDetails = () =>{
                     })
                 }else{
                     await apiWatchDetailsSeries(film).get().then(res =>{
+                        setWatch('Série')
                         setDetails(res.data)
-                        console.log(res.data)
-                        console.log(res.data.first_air_date)
                         const firstDate = new Date(res.data.first_air_date)
                         setDate(firstDate.getFullYear())
                         if(res.data.number_of_seasons > 1){
@@ -95,10 +96,9 @@ const WatchDetails = () =>{
             }
             Details();
     },[idFilm, video])
-
     return(   
         <ContainerContests>
-            <TitleContents data-title = 'title' className="watch-details">Watch Details</TitleContents>
+            <TitleContents data-title = 'title' className="watch-details">Info {watch}</TitleContents>
             <BoxContents>
                 {details !== [] ? 
                 <ContainerDetails>

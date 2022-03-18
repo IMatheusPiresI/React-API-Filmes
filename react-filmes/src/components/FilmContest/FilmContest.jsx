@@ -19,7 +19,6 @@ const FilmContest = () =>{
             // Pegando a lista Total
             let list = await apiHomePage.getHomeList()
             setMovieList(list)
-            console.log(list)
         }
 
         loadAll();

@@ -17,7 +17,6 @@ const DrawContents = () =>{
     useEffect(() =>{
         const InitDraw = async() =>{
             const getDraw = localStorage.getItem('draw');
-            console.log(getDraw)
             if(getDraw){
                 if(getDraw !== null){
                     await apiDrawSerie(getDraw)

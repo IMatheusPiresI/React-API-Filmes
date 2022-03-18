@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const ImageDraw = styled.img`
     width: 150px;
-    animation: image 5s linear infinite;
 
     @keyframes image{
         0%{

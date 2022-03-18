@@ -14,7 +14,6 @@ const MovieRow = ({title, items, slug}) =>{
             x = 0
         }
         setScrollX(x)
-        console.log(items)
     }
 
     const handleRightArrow = () =>{

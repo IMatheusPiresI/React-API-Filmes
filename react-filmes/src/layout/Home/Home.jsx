@@ -32,7 +32,7 @@ const Home = () =>{
         const itens = document.querySelectorAll('[data-id')
         if(window.location.pathname === '/film'){
             itens[0].classList.add('item-clicked', 'icon-clicked')
-        } else if(window.location.pathname === '/netflix'){
+        } else if(window.location.pathname === '/search'){
             itens[1].classList.add('item-clicked', 'icon-clicked')
         } else if(window.location.pathname === '/draw'){
             itens[2].classList.add('item-clicked', 'icon-clicked')

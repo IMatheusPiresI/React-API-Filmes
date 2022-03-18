@@ -71,6 +71,21 @@ export const ContainerFilms = styled.div`
     gap: 52px;
     padding: 2em 1em;
     margin-top: 5em;
+
+    .animate-card{
+        animation: viewmoving .6s ease;
+    }
+
+    @keyframes viewmoving{
+        0%{
+            transform: translateX(-20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
 `;
 
 export const InputSearchMovie = styled.input`

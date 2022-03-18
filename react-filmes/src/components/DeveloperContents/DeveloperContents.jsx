@@ -23,7 +23,6 @@ const DeveloperContents = () =>{
     useEffect(()=>{
         const githubReposAPI = async() =>{
             await apiGithubRepos().get().then(res => {
-                console.log(res.data)
                 setRepos(res.data)
             })
         }
@@ -34,7 +33,6 @@ const DeveloperContents = () =>{
     useEffect(()=>{
         const githubUserAPI = async() =>{
             await apiGithubUser().get().then(res =>{
-                console.log(res.data)
                 const infoMyUser = res.data
                 setInfoUser(infoMyUser)
             })

@@ -15,7 +15,6 @@ function CardSearchFilm({title, img, synopsis, adult, className, idMovie, videoF
         navigate(`/movie/${idMovie}`)
         setIdFilm(idMovie)
         setVideo(videoFilm)
-        console.log(idMovie)
     }
 
     useEffect(()=>{

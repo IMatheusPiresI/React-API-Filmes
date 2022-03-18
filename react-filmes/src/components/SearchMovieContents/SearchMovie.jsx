@@ -24,12 +24,7 @@ const SearchMovieContents = () =>{
                     await apiSearchMovie(value)
                         .get()
                         .then(res=>{
-                            setResponse(res.data.results)
-                            console.log(res.data.results)
-                            
-                        })
-                        .catch(err =>{
-                            console.log(err)
+                            setResponse(res.data.results)                      
                         })
                 }
                 searchFilm(value)
@@ -43,12 +38,7 @@ const SearchMovieContents = () =>{
                     await apiSearchMovie(value)
                         .get()
                         .then(res=>{
-                            setResponse(res.data.results)
-                            console.log(res.data.results)
-                            
-                        })
-                        .catch(err =>{
-                            console.log(err)
+                            setResponse(res.data.results)                        
                         })
                 }
                 searchFilm(getSearch)
@@ -61,7 +51,7 @@ const SearchMovieContents = () =>{
             <BoxContents>
                     <InputSearchMovie type="text" id="film" autoComplete="off" spellCheck="false" placeholder="Digite o nome do filme"/>
                     <ContainerFilms>
-                    {getSearchMovie === "" ? <BoxCardSortear><LoadingDrawMovie/></BoxCardSortear>: response.map(film =>{
+                    {getSearchMovie === "" ? <BoxCardSortear className="animate-card"><LoadingDrawMovie/></BoxCardSortear>: response.map(film =>{
                         return <CardSearchFilm 
                             key={film.id}
                             id={film.id}

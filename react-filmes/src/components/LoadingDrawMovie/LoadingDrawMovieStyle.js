@@ -2,14 +2,11 @@ import styled from 'styled-components'
 
 export const ImageDraw = styled.img`
     width: 150px;
-    animation: image 5s linear infinite;
+    animation: imagee 5s linear infinite;
 
-    @keyframes image{
+    @keyframes imagee{
         0%{
             transform: rotateY(0deg);
-        }
-        50%{
-            transform: rotateY(180deg);
         }
         100%{
             transform: rotateY(360deg);
@@ -38,19 +35,6 @@ export const BoxImageDraw = styled.div`
     align-items: center;
     justify-content: center;
     transition: .5s ease-in-out;
-    animation: loadingOpacity .6s linear;
-
-    @keyframes loadingOpacity{
-        0%{
-            opacity: 0;
-        }
-        75%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
 
     @media (max-width: 465px){
         margin: .5em 1em;

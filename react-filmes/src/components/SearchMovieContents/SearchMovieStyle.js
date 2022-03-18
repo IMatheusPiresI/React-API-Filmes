@@ -73,17 +73,22 @@ export const ContainerFilms = styled.div`
     margin-top: 5em;
 
     .animate-card{
-        animation: viewmoving .6s ease;
+        transition: .6s;
+        animation: cardOpacity .9s ease forwards;
     }
 
-    @keyframes viewmoving{
+    @keyframes cardOpacity{
         0%{
-            transform: translateX(-20px);
             opacity: 0;
+            transform: translateX(-50px);
+        }
+        50%{
+            opacity: 0;
+            transform: translateX(-50px);
         }
         100%{
-            transform: translateX(0px);
             opacity: 1;
+            transform: translateX(0px);
         }
     }
 `;

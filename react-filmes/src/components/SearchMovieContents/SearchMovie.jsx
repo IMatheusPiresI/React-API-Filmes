@@ -50,8 +50,8 @@ const SearchMovieContents = () =>{
             
             <BoxContents>
                     <InputSearchMovie type="text" id="film" autoComplete="off" spellCheck="false" placeholder="Digite o nome do filme"/>
-                    <ContainerFilms>
-                    {getSearchMovie === "" ? <BoxCardSortear className="animate-card"><LoadingDrawMovie/></BoxCardSortear>: response.map(film =>{
+                    <ContainerFilms className="animate-card"> 
+                    {getSearchMovie === "" ? <BoxCardSortear className="animate-card"> <LoadingDrawMovie/> </BoxCardSortear>: response.map(film =>{
                         return <CardSearchFilm 
                             key={film.id}
                             id={film.id}

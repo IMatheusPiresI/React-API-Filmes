@@ -22,12 +22,11 @@ const DrawContents = () =>{
                     await apiDrawSerie(getDraw)
                     .get()
                     .then(res => {
-                        setDrawSerie(res.data)
-                        console.log(res.data)
+                        setDrawSerie(res.data);
                         if(res.data.poster_path !== null){
-                            setImage(`https://image.tmdb.org/t/p/w500${res.data.poster_path}`)
+                            setImage(`https://image.tmdb.org/t/p/w500${res.data.poster_path}`);
                         }else{
-                            setImage(`https://image.tmdb.org/t/p/w500${res.data.backdrop_path}`)
+                            setImage(`https://image.tmdb.org/t/p/w500${res.data.backdrop_path}`);
                         }
                     })
                     .catch(() =>{
@@ -36,7 +35,6 @@ const DrawContents = () =>{
                             .get()
                             .then(res => {
                                 setDrawSerie(res.data)
-                                console.log(res.data)
                                 if(res.data.poster_path !== null){
                                     setImage(`https://image.tmdb.org/t/p/w500${res.data.poster_path}`)
                                 }else{
@@ -61,7 +59,6 @@ const DrawContents = () =>{
                 .get()
                 .then(res => {
                     setDrawSerie(res.data)
-                    console.log(res.data)
                     if(res.data.poster_path !== null){
                         setImage(`https://image.tmdb.org/t/p/w500${res.data.poster_path}`)
                     }else{
@@ -73,7 +70,6 @@ const DrawContents = () =>{
                     .get()
                     .then(res => {
                         setDrawSerie(res.data)
-                        console.log(res.data)
                         if(res.data.poster_path !== null){
                             setImage(`https://image.tmdb.org/t/p/w500${res.data.poster_path}`)
                         }else{

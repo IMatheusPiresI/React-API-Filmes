@@ -12,7 +12,7 @@ const ParticleBackground = () =>{
                             value: 40,
                             density: {
                               enable: true,
-                              value_area: 200
+                              value_area: 300
                             }
                           },
                           color: {

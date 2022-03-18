@@ -117,7 +117,7 @@ const WatchDetails = () =>{
                                         <LinkA href={details.homepage} target='_blank'>
                                             <ButtonDetails
                                                 className={'website'}
-                                                name={'Visite o Site'}
+                                                name={'Site'}
                                                 icon={<Language/>}
                                             />
                                         </LinkA>

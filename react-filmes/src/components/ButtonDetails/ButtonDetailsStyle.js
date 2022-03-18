@@ -8,4 +8,8 @@ export const Button = styled.button`
     align-items: center;
     font-size: 16px;
     gap: 5px;
+
+    @media (max-width: 390px){
+        gap: 2px;
+    }
 `;

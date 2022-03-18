@@ -65,6 +65,10 @@ export const TitleDetails = styled.h2`
     @media (max-width: 390px){
         font-size: 28px;
     }
+
+    @media (max-width: 350px){
+        font-size: 25px;
+    }
 `;
 
 export const ContainerInfo = styled.div`
@@ -114,6 +118,10 @@ export const DescriptionDetails = styled.p`
     @media (max-width: 390px){
         font-size: 15px;
     }
+
+    @media (max-width: 350px){
+        font-size: 13px;
+    }
 `;
 
 export const BoxVoteYearSeason = styled.div`
@@ -138,6 +146,10 @@ export const InfoVoteDateSeason = styled.p`
 
     @media (max-width: 420px){
         font-size: 15px;
+    }
+
+    @media (max-width: 350px){
+        font-size: 12px;
     }
 `;
 export const BoxButtons = styled.div`
@@ -194,6 +206,21 @@ export const BoxButtons = styled.div`
         .website, .developer{
             width: 120px;
             font-size: 11px;
+        }
+    }
+
+    @media (max-width: 350px){
+        gap: 5px;
+        .website, .developer{
+            width: 100px;
+            font-size: 9px;
+        }
+    }
+
+    @media (max-width: 350px){
+        flex-direction: column;
+        .website, .developer{
+            width: 100%;
         }
     }
 `;

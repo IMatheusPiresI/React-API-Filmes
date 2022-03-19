@@ -7,12 +7,14 @@ export const ContainerDetails = styled.div`
 
 export const BoxDetails = styled.div`
     width: calc(100vw - 120px);
-    height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-clip: border-box;
+    background-position: fixed;
     z-index: 0;
+    position: fixed;
 
     @media (max-width: 525px){
         width: calc(100vw - 95px);
@@ -86,12 +88,12 @@ export const ContainerInfo = styled.div`
 
     @media (max-width: 515px){
         width: 100%;
-        padding: 120px 20px;
+        padding: 80px 20px 0px 20px;
     }
 
     @media (max-width: 390px){
         width: 100%;
-        padding: 120px 10px;
+        padding: 80px 20px 0px 20px;
     }
 `;
 

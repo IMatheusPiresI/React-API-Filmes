@@ -11,6 +11,7 @@ export const ContainerModal = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1em;
 
     @media (max-width: 525px) {
         width: calc(100vw - 95px);

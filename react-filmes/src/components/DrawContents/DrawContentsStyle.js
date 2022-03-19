@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerDraw = styled.div`
     width: 100%;
     min-height: calc(100vh - 75px);
+    background-color: #000;
     height: 100%;
     display: flex;
     flex-direction: column;

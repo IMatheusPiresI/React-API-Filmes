@@ -4,7 +4,6 @@ export const ContainerContests = styled.div`
     margin-left: 120px;
     min-height: 100vh;
     width: calc(100% - 125px);
-
     .watch-details{
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
     }
@@ -50,7 +49,7 @@ export const TitleContents = styled.h2`
 
 export const BoxContents = styled.div`
     width: 100%;
-    min-height: calc(100vh - 75px);
+    min-height: 100%;
     position: relative;
     top: 75px;
     display: flex;

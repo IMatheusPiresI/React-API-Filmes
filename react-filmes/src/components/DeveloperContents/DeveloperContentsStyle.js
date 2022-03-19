@@ -72,7 +72,7 @@ export const BoxImageDescription = styled.div`
 export const BoxRepos = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0em 1.5em;
+    padding: 0em 1.5em 2em 1.5em;
 
     @media (max-width: 900px) {
         margin-top: 2em;

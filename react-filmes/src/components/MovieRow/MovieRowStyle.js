@@ -4,7 +4,7 @@ export const ContainerRow = styled.div`
     width: calc(100vw - 135px);
     animation: Visible 1.5s ease;
     margin: 20px 0px;
-
+    
     .icon{
         color: rgba(232, 0, 97, 1);
         font-size: 45px;
@@ -24,7 +24,11 @@ export const ContainerRow = styled.div`
     }
 
     @media (max-width: 525px){
-        width: calc(100vw - 95px);
+        width: calc(100vw - 110px);
+    }
+
+    @media (max-width: 390px){
+        width: calc(100vw - 90px);
     }
 `;
 

@@ -38,7 +38,7 @@ Repositório do projeto **MoviesApp** desenvolvido com fins didáticos de aprimo
 
 <h3 id="instalacao">🛠️ Acessar Projeto</h3>
 
-Ao clicar em [MoviesApp](https://movies-app-beta-henna.vercel.app)🔗 o site irá abrir para que possa utilizá-lo. Ele salvará as informações de filmes sorteados e pesquisados caso feche e página e abra novamente, todos esse dados são salvos e recuperados via localStorage;
+Ao clicar em <a href="https://movies-app-beta-henna.vercel.app" target="_blank">Movies App</a>🔗 o site irá abrir para que possa utilizá-lo. Ele salvará as informações de filmes sorteados e pesquisados caso feche e página e abra novamente, todos esse dados são salvos e recuperados via localStorage;
 
 <h3 id="tecnologias">⚙️ Tecnologias Utilizadas</h3>
 

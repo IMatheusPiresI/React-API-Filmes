@@ -7,8 +7,8 @@ Repositório do projeto **MoviesApp** desenvolvido com fins didáticos de aprimo
 <details>
 <summary>Clique para expandir</summary>
 ◽ <a href="#inicio">Início</a> <br>
-◽ <a href="#acessar-projeto">Acessar Projeto</a> <br>
-◽ <a href="#instalacao">Instalação</a> <br>
+◽ <a href="#instalação">Acessar Projeto</a> <br>
+◽ <a href="#acessar-projeto">Instalação</a> <br>
 ◽ <a href="#tecnologias">Tecnologias</a> <br>
 ◽ <a href="#sobre">Sobre</a> <br>
 ◽ <a href="#extras">Extras</a> <br>

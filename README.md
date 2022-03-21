@@ -69,7 +69,7 @@ Ao clicar em <a href="https://movies-app-beta-henna.vercel.app" target="_blank">
 
 <h3 id="preview">🎥 Preview</h3>
 
-<img src="./animacao.gif" width="600px">
+<img src="./animacao.gif" width="100%">
 
 <h3 id="status">📌 Status do projeto</h3>
 

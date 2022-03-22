@@ -44,7 +44,7 @@ const MovieRow = ({title, items, slug}) =>{
                     return (
                                 <ItemFilm 
                                     key={key}
-                                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                                    src={item.poster_path !== null? `https://image.tmdb.org/t/p/w500${item.poster_path}` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Noimage.svg/1479px-Noimage.svg.png' }
                                     alt={item.original_title}
                                     slug={slug}
                                     film={item.id}

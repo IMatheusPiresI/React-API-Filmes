@@ -7,8 +7,8 @@ Repositório do projeto **MoviesApp** desenvolvido com fins didáticos de aprimo
 <details>
 <summary>Clique para expandir</summary>
 ◽ <a href="#inicio">Início</a> <br>
-◽ <a href="#acessar-projeto">Acessar Projeto</a> <br>
-◽ <a href="#instalacao">Instalação</a> <br>
+◽ <a href="#instalacao">Acessar Projeto</a> <br>
+◽ <a href="#acessar-projeto">Instalação</a> <br>
 ◽ <a href="#tecnologias">Tecnologias</a> <br>
 ◽ <a href="#sobre">Sobre</a> <br>
 ◽ <a href="#extras">Extras</a> <br>
@@ -16,6 +16,10 @@ Repositório do projeto **MoviesApp** desenvolvido com fins didáticos de aprimo
 ◽ <a href="#status">Status do Projeto</a> <br>
 ◽ <a href="#autor">Autor</a> <br>
 </details>
+
+<h3 id="preview">🎥 Preview</h3>
+
+<img src="./animacao.gif" width="100%">
 
 <h3 id="inicio">🚀 Site do projeto</h3>
 
@@ -66,10 +70,6 @@ Ao clicar em <a href="https://movies-app-beta-henna.vercel.app" target="_blank">
 ✅ Todo o conteúdo são páginas acessadas através do roteamento do React-Router-Dom. <br>
 ✅ Trabalhei com diversas requisições a API para criar as Sessões e funcionalidades. <br>
 ✅ Projeto responsivo. <br>
-
-<h3 id="preview">🎥 Preview</h3>
-
-<img src="./animacao.gif" width="600px">
 
 <h3 id="status">📌 Status do projeto</h3>
 
